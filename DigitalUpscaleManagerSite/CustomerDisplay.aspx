@@ -6,19 +6,19 @@
 <head id="Head1" runat="server">
     <title>Customer Display</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="Styles/bootstrap.min.css" rel="stylesheet" />
-    <link href="Styles/bootstrap-theme.min.css" rel="stylesheet" />
+    <link href="Styles/bootstrap.css" rel="stylesheet" />
+    <link href="Styles/Styles.css" rel="stylesheet" />
     <meta name="description" content="The description of my page" />
 </head>
 <body>
-    <header>
+    <header class="navbar">
         <h1>Digital Upscale Manager for Ballgames</h1>
         <h2>"Managing Ballgames with Technology"</h2>
     </header>
-    <section>
+    <section class="container">
     <form id="form1" runat="server">
         <br />
-        <label>Please select a customer&nbsp;</label>
+        <h3>Please select a customer&nbsp;</h3>
         <asp:DropDownList ID="ddlCustomers" runat="server" AutoPostBack="True" 
             DataSourceID="SqlDataSource1" DataTextField="Name" 
             DataValueField="CustomerID">
@@ -47,5 +47,8 @@
         </div>
     </form>
     </section>
+    <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+    <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>  
+    <script src="Scripts/bootstrap.js"></script>
 </body>
 </html>

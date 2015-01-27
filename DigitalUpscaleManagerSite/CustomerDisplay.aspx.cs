@@ -61,4 +61,10 @@ public partial class Default : System.Web.UI.Page
         return p;
     }
 
+    protected override void OnLoad(EventArgs e)
+    {
+        base.OnLoad(e);
+        Page.Header.DataBind();
+    }
+
 }
