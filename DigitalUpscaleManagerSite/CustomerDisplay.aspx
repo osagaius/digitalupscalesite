@@ -6,6 +6,9 @@
 <head id="Head1" runat="server">
     <title>Customer Display</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="Styles/bootstrap.min.css" rel="stylesheet" />
+    <link href="Styles/bootstrap-theme.min.css" rel="stylesheet" />
+    <meta name="description" content="The description of my page" />
 </head>
 <body>
     <header>
