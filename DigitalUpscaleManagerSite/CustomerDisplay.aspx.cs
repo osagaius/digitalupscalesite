@@ -28,7 +28,7 @@ public partial class Default : System.Web.UI.Page
 
     private void RebuildLabels()
     {
-        lblCustomerID.Text = "Name: ";
+        lblCustomerID.Text = "Customer ID: ";
         lblAddress.Text = "Address: ";
         lblCity.Text = "City: ";
         lblState.Text = "State: ";
