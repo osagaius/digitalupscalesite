@@ -16,17 +16,30 @@ public partial class Default : System.Web.UI.Page
             ddlCustomers.DataBind();
 
         _selectedCustomer = this.GetSelectedCustomer();
-        lblCustomerID.Text = _selectedCustomer.CustomerId;
-        lblAddress.Text = _selectedCustomer.Address;
-        lblCity.Text = _selectedCustomer.City;
-        lblState.Text = _selectedCustomer.State;
-        lblZipCode.Text = _selectedCustomer.ZipCode;
-        lblPhone.Text = _selectedCustomer.Phone;
-        lblEmail.Text = _selectedCustomer.Email;
+        RebuildLabels();
+        lblCustomerID.Text += _selectedCustomer.CustomerId;
+        lblAddress.Text += _selectedCustomer.Address;
+        lblCity.Text += _selectedCustomer.City;
+        lblState.Text += _selectedCustomer.State;
+        lblZipCode.Text += _selectedCustomer.ZipCode;
+        lblPhone.Text += _selectedCustomer.Phone;
+        lblEmail.Text += _selectedCustomer.Email;
+    }
+
+    private void RebuildLabels()
+    {
+        lblCustomerID.Text = "Name: ";
+        lblAddress.Text = "Address: ";
+        lblCity.Text = "City: ";
+        lblState.Text = "State: ";
+        lblZipCode.Text = "Zip Code: ";
+        lblPhone.Text = "Phone: ";
+        lblEmail.Text = "Email: ";
     }
 
     private Customer GetSelectedCustomer()
     {
+
         var customersTable = (DataView)
             SqlDataSource1.Select(DataSourceSelectArguments.Empty);
         if (customersTable == null) return null;

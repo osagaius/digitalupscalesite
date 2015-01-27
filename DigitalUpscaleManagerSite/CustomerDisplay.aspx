@@ -21,14 +21,22 @@
         </asp:DropDownList><br />
         <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:DigitalManagerConnectionString %>" ProviderName="<%$ ConnectionStrings:DigitalManagerConnectionString.ProviderName %>" SelectCommand="SELECT * FROM [Customer] ORDER BY [CustomerID]"></asp:SqlDataSource>
         <div id="customerData">
-            <asp:Label ID="lblName" runat="server"></asp:Label>
-            <asp:Label ID="lblCustomerID" runat="server"></asp:Label>
-            <asp:Label ID="lblAddress" runat="server"></asp:Label>
-            <asp:Label ID="lblCity" runat="server"></asp:Label>
-            <asp:Label ID="lblState" runat="server"></asp:Label>
-            <asp:Label ID="lblZipCode" runat="server"></asp:Label>
-            <asp:Label ID="lblPhone" runat="server"></asp:Label>
-            <asp:Label ID="lblEmail" runat="server"></asp:Label>
+            <h3>Customer Information:</h3><br />
+            <asp:Label ID="lblCustomerID" runat="server">Customer ID</asp:Label>
+            <br />
+            <asp:Label ID="lblAddress" runat="server">Address</asp:Label>
+            <br />
+            <asp:Label ID="lblCity" runat="server">City</asp:Label>
+            <br />
+            <asp:Label ID="lblState" runat="server">State</asp:Label>
+            <br />
+            <asp:Label ID="lblZipCode" runat="server">Zip Code</asp:Label>
+            <br />
+            <asp:Label ID="lblPhone" runat="server">Phone</asp:Label>
+            <br />
+            <asp:Label ID="lblEmail" runat="server">Email</asp:Label>
+            <br />
+            <br />
             <asp:Button ID="btnAdd" runat="server" Text="Add to Contacts"/>
             <asp:Button ID="btnView" runat="server" Text="View Contact List" 
                 CausesValidation="False" />
