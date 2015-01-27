@@ -1,10 +1,11 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="CustomerDisplay.aspx.cs" Inherits="_Default" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="CustomerDisplay.aspx.cs" Inherits="Default" %>
 
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head id="Head1" runat="server">
     <title>Customer Display</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
 <body>
     <header>
@@ -25,7 +26,7 @@
             <asp:Label ID="lblAddress" runat="server"></asp:Label>
             <asp:Label ID="lblCity" runat="server"></asp:Label>
             <asp:Label ID="lblState" runat="server"></asp:Label>
-            <asp:Label ID="lblZipcode" runat="server"></asp:Label>
+            <asp:Label ID="lblZipCode" runat="server"></asp:Label>
             <asp:Label ID="lblPhone" runat="server"></asp:Label>
             <asp:Label ID="lblEmail" runat="server"></asp:Label>
             <asp:Button ID="btnAdd" runat="server" Text="Add to Contacts"/>

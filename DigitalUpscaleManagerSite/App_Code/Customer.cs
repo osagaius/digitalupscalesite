@@ -33,7 +33,7 @@ public class Customer
     /// <summary>
     /// The _zipcode
     /// </summary>
-    private string _zipcode;
+    private string _zipCode;
     /// <summary>
     /// The _email
     /// </summary>
@@ -133,13 +133,13 @@ public class Customer
     /// <value>
     /// The zipcode.
     /// </value>
-    public string Zipcode
+    public string ZipCode
     {
-        get { return _zipcode; }
+        get { return _zipCode; }
         set
         {
             Trace.Assert(value != null, "Invalid zipcode");
-            _zipcode = value;
+            _zipCode = value;
         }
     }
 
