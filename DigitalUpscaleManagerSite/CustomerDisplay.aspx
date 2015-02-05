@@ -6,9 +6,8 @@
 <head id="Head1" runat="server">
     <title>Customer Display</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="Styles/bootstrap.css" rel="stylesheet" />
     <link href="Styles/Styles.css" rel="stylesheet" />
-    <meta name="description" content="The description of my page" />
+    <meta name="description" content="Displays information about customers" />
 </head>
 <body>
     <header class="navbar">
@@ -23,7 +22,7 @@
             DataSourceID="SqlDataSource1" DataTextField="Name" 
             DataValueField="CustomerID">
         </asp:DropDownList><br />
-        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:DigitalManagerConnectionString %>" ProviderName="<%$ ConnectionStrings:DigitalManagerConnectionString.ProviderName %>" SelectCommand="SELECT * FROM [Customer] ORDER BY [CustomerID]"></asp:SqlDataSource>
+        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:DigitalManagerConnectionString %>" ProviderName="<%$ ConnectionStrings:DigitalManagerConnectionString.ProviderName %>" SelectCommand="SELECT [CustomerID], [Name], [Address], [City], [State], [ZipCode], [Phone], [Email] FROM [Customer] ORDER BY [CustomerID], [Name]"></asp:SqlDataSource>
         <div id="customerData">
             <h3>Customer Information:</h3><br />
             <asp:Label ID="lblCustomerID" runat="server">Customer ID</asp:Label>
@@ -41,14 +40,13 @@
             <asp:Label ID="lblEmail" runat="server">Email</asp:Label>
             <br />
             <br />
-            <asp:Button ID="btnAdd" runat="server" Text="Add to Contacts"/>
+            <asp:Button ID="btnAdd" runat="server" Text="Add to Contacts" OnClick="btnAdd_Click"/>
             <asp:Button ID="btnView" runat="server" Text="View Contact List" 
-                CausesValidation="False" />
+                CausesValidation="False" OnClick="btnView_Click" />
         </div>
     </form>
     </section>
     <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
     <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>  
-    <script src="Scripts/bootstrap.js"></script>
 </body>
 </html>

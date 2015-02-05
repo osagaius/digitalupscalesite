@@ -1,178 +1,208 @@
 ﻿using System.Diagnostics;
 
 /// <summary>
-/// Models a Customer object.
+///     Models a Customer object.
 /// </summary>
 /// <author>
-/// Osa Gaius
+///     Osa Gaius
 /// </author>
 /// <version>Spring 2015</version>
 public class Customer
 {
     #region Instance variables
+
     /// <summary>
-    /// The _customer identifier
+    ///     The _customer identifier
     /// </summary>
     private string _customerId;
+
     /// <summary>
-    /// The _name
+    ///     The _firstName
     /// </summary>
-    private string _name;
+    private string _firstName;
+
     /// <summary>
-    /// The _address
+    /// The _last name
+    /// </summary>
+    private string _lastName;
+
+    /// <summary>
+    ///     The _address
     /// </summary>
     private string _address;
+
     /// <summary>
-    /// The _city
+    ///     The _city
     /// </summary>
     private string _city;
+
     /// <summary>
-    /// The _state
+    ///     The _state
     /// </summary>
     private string _state;
+
     /// <summary>
-    /// The _zipcode
+    ///     The _zipcode
     /// </summary>
     private string _zipCode;
+
     /// <summary>
-    /// The _email
+    ///     The _email
     /// </summary>
     private string _email;
+
     /// <summary>
-    /// The _phone
+    ///     The _phone
     /// </summary>
-    private string _phone; 
+    private string _phone;
+
     #endregion
 
-
     #region Properties
-		// <summary>
+
+    /// <summary>
     /// Gets or sets the product identifier.
     /// </summary>
     /// <value>
-    /// The product identifier.
+    ///     The product identifier.
     /// </value>
     public string CustomerId
     {
-        get { return _customerId; }
+        get { return this._customerId; }
         set
         {
             Trace.Assert(value != null, "Invalid Customer Id");
-            _customerId = value;
+            this._customerId = value;
         }
     }
 
     /// <summary>
-    /// Gets or sets the name.
+    ///     Gets or sets the name.
     /// </summary>
     /// <value>
-    /// The name.
+    ///     The name.
     /// </value>
-    public string Name
+    public string FirstName
     {
-        get { return _name; }
+        get { return this._firstName; }
         set
         {
-            Trace.Assert(value != null, "Invalid Name");
-            _name = value;
+            Trace.Assert(value != null, "Invalid FirstName");
+            this._firstName = value;
         }
     }
 
     /// <summary>
-    /// Gets or sets the short description.
+    ///     Gets or sets the short description.
     /// </summary>
     /// <value>
-    /// The short description.
+    ///     The short description.
     /// </value>
     public string Address
     {
-        get { return _address; }
+        get { return this._address; }
         set
         {
             Trace.Assert(value != null, "Invalid Address");
-            _address = value;
+            this._address = value;
         }
     }
 
     /// <summary>
-    /// Gets or sets the long description.
+    ///     Gets or sets the long description.
     /// </summary>
     /// <value>
-    /// The long description.
+    ///     The long description.
     /// </value>
     public string City
     {
-        get { return _city; }
+        get { return this._city; }
         set
         {
             Trace.Assert(value != null, "Invalid City");
-            _city = value;
+            this._city = value;
         }
     }
 
-
     /// <summary>
-    /// Gets or sets the image file.
+    ///     Gets or sets the image file.
     /// </summary>
     /// <value>
-    /// The image file.
+    ///     The image file.
     /// </value>
     public string State
     {
-        get { return _state; }
+        get { return this._state; }
         set
         {
             Trace.Assert(value != null, "Invalid state");
-            _state = value;
+            this._state = value;
         }
     }
 
     /// <summary>
-    /// Gets or sets the zipcode.
+    ///     Gets or sets the zipcode.
     /// </summary>
     /// <value>
-    /// The zipcode.
+    ///     The zipcode.
     /// </value>
     public string ZipCode
     {
-        get { return _zipCode; }
+        get { return this._zipCode; }
         set
         {
             Trace.Assert(value != null, "Invalid zipcode");
-            _zipCode = value;
+            this._zipCode = value;
         }
     }
 
     /// <summary>
-    /// Gets or sets the email.
+    ///     Gets or sets the email.
     /// </summary>
     /// <value>
-    /// The email.
+    ///     The email.
     /// </value>
     public string Email
     {
-        get { return _email; }
+        get { return this._email; }
         set
         {
             Trace.Assert(value != null, "Invalid email");
-            _email = value;
+            this._email = value;
         }
     }
 
     /// <summary>
-    /// Gets or sets the phone.
+    ///     Gets or sets the phone.
     /// </summary>
     /// <value>
-    /// The phone.
+    ///     The phone.
     /// </value>
     public string Phone
     {
-        get { return _phone; }
+        get { return this._phone; }
         set
         {
             Trace.Assert(value != null, "Invalid phone");
-            _phone = value;
+            this._phone = value;
         }
-    } 
-	#endregion
+    }
+
+    /// <summary>
+    /// Gets or sets the last name.
+    /// </summary>
+    /// <value>
+    /// The last name.
+    /// </value>
+    public string LastName
+    {
+        get { return this._lastName; }
+        set
+        {
+            Trace.Assert(value != null, "Invalid name");
+            this._lastName = value;
+        }
+    }
+
+    #endregion
 }
