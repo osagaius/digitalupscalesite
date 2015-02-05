@@ -3,8 +3,12 @@ using System.Data;
 using System.Web.UI;
 
 /// <summary>
-/// 
+/// Code behind for the CustomerDisplay page.
 /// </summary>
+/// <author>
+///     Osa Gaius
+/// </author>
+/// <version>Spring 2015</version>
 public partial class Default : Page
 {
     /// <summary>

@@ -1,10 +1,22 @@
 ﻿using System;
 using System.Web.UI;
 
-public partial class Cart : Page
+/// <summary>
+/// Code behind for the ContactList page.
+/// </summary>
+/// <author>
+///     Osa Gaius
+/// </author>
+/// <version>Spring 2015</version>
+public partial class ContactList : Page
 {
     private CustomerList customerList;
 
+    /// <summary>
+    /// Handles the Load event of the Page control.
+    /// </summary>
+    /// <param name="sender">The source of the event.</param>
+    /// <param name="e">The <see cref="System.EventArgs"/> instance containing the event data.</param>
     protected void Page_Load(object sender, EventArgs e)
     {
         this.customerList = CustomerList.GetCustomers();
@@ -18,10 +30,15 @@ public partial class Cart : Page
         for (var i = 0; i < this.customerList.Count; i++)
         {
             var customer = this.customerList[i];
-            this.lstCustomers.Items.Add(customer.FirstName);
+            this.lstCustomers.Items.Add(customer.GenerateDisplayText());
         }
     }
 
+    /// <summary>
+    /// Handles the Click event of the btnRemove control.
+    /// </summary>
+    /// <param name="sender">The source of the event.</param>
+    /// <param name="e">The <see cref="System.EventArgs"/> instance containing the event data.</param>
     protected void btnRemove_Click(object sender, EventArgs e)
     {
         if (this.customerList.Count <= 0)
@@ -45,6 +62,11 @@ public partial class Cart : Page
         }
     }
 
+    /// <summary>
+    /// Handles the Click event of the btnEmpty control.
+    /// </summary>
+    /// <param name="sender">The source of the event.</param>
+    /// <param name="e">The <see cref="System.EventArgs"/> instance containing the event data.</param>
     protected void btnEmpty_Click(object sender, EventArgs e)
     {
         if (this.customerList.Count <= 0)
@@ -55,6 +77,11 @@ public partial class Cart : Page
         this.lblMessage.Text = string.Empty;
         this.lstCustomers.Items.Clear();
     }
+    /// <summary>
+    /// Handles the Click event of the btnSelectAdditional control.
+    /// </summary>
+    /// <param name="sender">The source of the event.</param>
+    /// <param name="e">The <see cref="System.EventArgs"/> instance containing the event data.</param>
     protected void btnSelectAdditional_Click(object sender, EventArgs e)
     {
         Response.Redirect("CustomerDisplay.aspx");

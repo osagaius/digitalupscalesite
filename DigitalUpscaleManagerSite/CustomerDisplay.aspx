@@ -45,7 +45,7 @@
                 CausesValidation="False" OnClick="btnView_Click" />
             <br />
             <br />
-            <asp:Label ID="lblMessage" runat="server"></asp:Label>
+            <asp:Label ID="lblMessage" runat="server" CssClass="message"></asp:Label>
         </div>
     </form>
     </section>

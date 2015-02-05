@@ -6,6 +6,10 @@ using System.Web;
 /// <summary>
 /// Models a list of customer objects.
 /// </summary>
+/// <author>
+///     Osa Gaius
+/// </author>
+/// <version>Spring 2015</version>
 public class CustomerList
 {
     /// <summary>

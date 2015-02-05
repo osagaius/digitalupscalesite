@@ -226,4 +226,13 @@ public class Customer
     }
 
     #endregion
+
+    /// <summary>
+    /// Generates the display text for the customer.
+    /// </summary>
+    /// <returns></returns>
+    public string GenerateDisplayText()
+    {
+        return this.LastName + ", " + this.FirstName + ": " + this.Phone + "; " + this.Email;
+    }
 }
