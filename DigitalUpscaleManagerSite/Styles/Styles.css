@@ -1,9 +1,8 @@
-﻿.navbar-brand small {
-  display:block;
-  font-size:12px;
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
 }
 
-body {
-  padding-top: 50px;
-  padding-bottom: 20px;
+.message {
+    color: red
 }

@@ -17,7 +17,7 @@
     <section class="container">
         <form id="form1" runat="server">
             <h3>Your contact list</h3>
-            <asp:ListBox ID="lstCustomers" runat="server" style="margin-right: 120px" Width="193px"></asp:ListBox>
+            <asp:ListBox ID="lstCustomers" runat="server" style="margin-right: 120px" Width="432px" Height="117px"></asp:ListBox>
 
             <div id="buttons">
                 <asp:Button ID="btnSelectAdditional" runat="server" Text="Select Additional Customers" CssClass="button" OnClick="btnSelectAdditional_Click" />
@@ -28,7 +28,7 @@
                     onclick="btnEmpty_Click" CssClass="button" />
             </div>
             <p id="message">
-                <asp:Label ID="lblMessage" runat="server"></asp:Label>
+                <asp:Label ID="lblMessage" runat="server" CssClass="message"></asp:Label>
             </p>
         </form>
     </section>

@@ -58,7 +58,7 @@ public partial class ContactList : Page
         }
         else
         {
-            this.lblMessage.Text = "Please select the item you want to remove.";
+            this.lblMessage.Text = "Please select the customer you want to remove.";
         }
     }
 
