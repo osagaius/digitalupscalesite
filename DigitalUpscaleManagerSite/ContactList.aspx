@@ -16,9 +16,9 @@
     </header>
     <section class="container">
         <form id="form1" runat="server">
-            <h3>Your contact list</h3>
+            <asp:Label ID="lblContactList" runat="server" Text="Your contact list"></asp:Label>
+            <br />
             <asp:ListBox ID="lstCustomers" runat="server" style="margin-right: 120px" Width="432px" Height="117px"></asp:ListBox>
-
             <div id="buttons">
                 <asp:Button ID="btnSelectAdditional" runat="server" Text="Select Additional Customers" CssClass="button" OnClick="btnSelectAdditional_Click" />
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
