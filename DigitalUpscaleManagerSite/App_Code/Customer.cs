@@ -17,6 +17,11 @@ public class Customer
     private string _customerId;
 
     /// <summary>
+    /// The _name
+    /// </summary>
+    private string _name;
+
+    /// <summary>
     ///     The _firstName
     /// </summary>
     private string _firstName;
@@ -201,6 +206,22 @@ public class Customer
         {
             Trace.Assert(value != null, "Invalid name");
             this._lastName = value;
+        }
+    }
+
+    /// <summary>
+    /// Gets or sets the name.
+    /// </summary>
+    /// <value>
+    /// The name.
+    /// </value>
+    public string Name
+    {
+        get { return this._name; }
+        set
+        {
+            Trace.Assert(value != null, "Invalid name");
+            this._name = value;
         }
     }
 

@@ -43,6 +43,9 @@
             <asp:Button ID="btnAdd" runat="server" Text="Add to Contacts" OnClick="btnAdd_Click"/>
             <asp:Button ID="btnView" runat="server" Text="View Contact List" 
                 CausesValidation="False" OnClick="btnView_Click" />
+            <br />
+            <br />
+            <asp:Label ID="lblMessage" runat="server"></asp:Label>
         </div>
     </form>
     </section>

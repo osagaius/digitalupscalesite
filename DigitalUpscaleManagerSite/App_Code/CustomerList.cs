@@ -1,9 +1,10 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Diagnostics;
 using System.Web;
 
 /// <summary>
-/// 
+/// Models a list of customer objects.
 /// </summary>
 public class CustomerList
 {
@@ -12,7 +13,7 @@ public class CustomerList
     /// </summary>
     private readonly List<Customer> _customerList;
 
-    
+
     /// <summary>
     /// Initializes a new instance of the <see cref="CustomerList"/> class.
     /// </summary>
@@ -63,13 +64,18 @@ public class CustomerList
         get
         {
             foreach (var currentCustomer in this._customerList)
-                if (currentCustomer.CustomerId == name) return currentCustomer;
+            {
+                if (currentCustomer.Name.Equals(name))
+                {
+                    return currentCustomer;
+                }
+            }
             return null;
         }
     }
 
     /// <summary>
-    /// Gets the list of customers.
+    /// Gets the list of customers from the session object.
     /// </summary>
     /// <returns></returns>
     public static CustomerList GetCustomers()
@@ -88,6 +94,7 @@ public class CustomerList
     {
         this._customerList.Add(newCustomer);
     }
+
 
     /// <summary>
     /// Removes the customer at the specified index.

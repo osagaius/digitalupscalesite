@@ -10,15 +10,17 @@
     <meta name="description" content="Displays information about customers" />
 </head>
 <body>
-    <header>
+    <header class="navbar">
+        <h1>Digital Upscale Manager for Ballgames</h1>
+        <h2>"Managing Ballgames with Technology"</h2>
     </header>
-    <section>
+    <section class="container">
         <form id="form1" runat="server">
-            <h1>Your contact list</h1>
+            <h3>Your contact list</h3>
             <asp:ListBox ID="lstCustomers" runat="server" style="margin-right: 120px" Width="193px"></asp:ListBox>
 
             <div id="buttons">
-                <asp:Button ID="btnSelectAdditional" runat="server" Text="Select Additional Customers" CssClass="button" />
+                <asp:Button ID="btnSelectAdditional" runat="server" Text="Select Additional Customers" CssClass="button" OnClick="btnSelectAdditional_Click" />
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <asp:Button ID="btnRemove" runat="server" Text="Remove Customer" 
                     onclick="btnRemove_Click" CssClass="button" />&nbsp;&nbsp;&nbsp;&nbsp;

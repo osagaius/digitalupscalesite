@@ -28,6 +28,12 @@ public partial class Cart : Page
         {
             return;
         }
+
+        this.RemoveSelectedCustomer();
+    }
+
+    private void RemoveSelectedCustomer()
+    {
         if (this.lstCustomers.SelectedIndex > -1)
         {
             this.customerList.RemoveAt(this.lstCustomers.SelectedIndex);
@@ -48,5 +54,9 @@ public partial class Cart : Page
         this.customerList.Clear();
         this.lblMessage.Text = string.Empty;
         this.lstCustomers.Items.Clear();
+    }
+    protected void btnSelectAdditional_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("CustomerDisplay.aspx");
     }
 }
