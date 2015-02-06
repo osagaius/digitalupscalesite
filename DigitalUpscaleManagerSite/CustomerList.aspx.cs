@@ -111,7 +111,7 @@ public partial class Default : Page
     /// <returns></returns>
     private string[] ExtractNames(string name)
     {
-        var names = name.Trim().Split(new char[] { ' ' }, 2);
+        var names = name.Trim().Split(new[] { ' ' }, 2);
         return names;
     }
 

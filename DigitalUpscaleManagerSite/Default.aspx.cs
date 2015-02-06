@@ -2,9 +2,9 @@
 using System.Web.UI;
 
 /// <summary>
-/// Code behind for the Customer Feedback page.
+/// Code behind for homepage
 /// </summary>
-public partial class CustomerFeedback : Page
+public partial class _Default : Page
 {
     /// <summary>
     /// Handles the Load event of the Page control.
@@ -13,8 +13,6 @@ public partial class CustomerFeedback : Page
     /// <param name="e">The <see cref="EventArgs"/> instance containing the event data.</param>
     protected void Page_Load(object sender, EventArgs e)
     {
-        this.txtCustomerID.Focus();
-        if (!IsPostBack)
-            this.pnlFeedback.Enabled = false;
+
     }
 }

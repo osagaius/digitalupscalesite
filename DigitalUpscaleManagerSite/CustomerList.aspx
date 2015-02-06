@@ -22,7 +22,7 @@
             DataSourceID="SqlDataSource1" DataTextField="Name" 
             DataValueField="CustomerID">
         </asp:DropDownList><br />
-        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:DigitalManagerConnectionString %>" ProviderName="<%$ ConnectionStrings:DigitalManagerConnectionString.ProviderName %>" SelectCommand="SELECT [CustomerID], [Name], [Address], [City], [State], [ZipCode], [Phone], [Email] FROM [Customer] ORDER BY [CustomerID], [Name]"></asp:SqlDataSource>
+        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:DigitalManagerConnectionString %>" ProviderName="<%$ ConnectionStrings:DigitalManagerConnectionString.ProviderName %>" SelectCommand="SELECT [CustomerID], [Name], [Address], [City], [State], [ZipCode], [Phone], [Email] FROM [Customer] ORDER BY [CustomerID], [Name]" OnSelecting="SqlDataSource1_Selecting"></asp:SqlDataSource>
         <div id="customerData">
             <h3>Customer Information:</h3><br />
             <asp:Label ID="lblCustomerID" runat="server">Customer ID</asp:Label>
