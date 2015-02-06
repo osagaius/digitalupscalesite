@@ -11,14 +11,7 @@ using System.Diagnostics;
 public class Feedback
 {
     #region Instance Variables
-    /// <summary>
-    /// The feedback identifier
-    /// </summary>
-    private string feedbackID;
-    /// <summary>
-    /// The customer identifier
-    /// </summary>
-    private string customerID;
+
     /// <summary>
     /// The software identifier
     /// </summary>
@@ -68,15 +61,7 @@ public class Feedback
     /// <value>
     /// The feedback identifier.
     /// </value>
-    public string FeedbackId
-    {
-        get { return this.feedbackID; }
-        set
-        {
-            Trace.Assert(value != null);
-            this.feedbackID = value;
-        }
-    }
+    public int FeedbackId { get; set; }
 
     /// <summary>
     /// Gets or sets the customer identifier.
@@ -84,15 +69,7 @@ public class Feedback
     /// <value>
     /// The customer identifier.
     /// </value>
-    public string CustomerId
-    {
-        get { return this.customerID; }
-        set
-        {
-            Trace.Assert(value != null);
-            this.customerID = value;
-        }
-    }
+    public int CustomerId { get; set; }
 
     /// <summary>
     /// Gets or sets the software identifier.
