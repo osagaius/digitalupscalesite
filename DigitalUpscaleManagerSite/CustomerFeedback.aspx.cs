@@ -130,6 +130,7 @@ public partial class CustomerFeedback : Page
         {
             return;
         }
+        // ReSharper disable once UnusedVariable
         var description = this.GenerateDescription();
 
         Session["Contact"] = this.chbContact.Checked;

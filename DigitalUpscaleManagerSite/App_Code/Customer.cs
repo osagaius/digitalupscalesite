@@ -89,7 +89,7 @@ public class Customer
     /// </value>
     public string FirstName
     {
-        get { return this._firstName; }
+        private get { return this._firstName; }
         set
         {
             Trace.Assert(value != null, "Invalid FirstName");
