@@ -1,10 +1,10 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="CustomerDisplay.aspx.cs" Inherits="Default" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="CustomerList.aspx.cs" Inherits="Default" %>
 
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head id="Head1" runat="server">
-    <title>Customer Display</title>
+    <title>Customer List</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="Styles/Styles.css" rel="stylesheet" />
     <meta name="description" content="Displays information about customers" />
