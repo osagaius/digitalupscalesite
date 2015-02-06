@@ -84,6 +84,6 @@ public partial class ContactList : Page
     /// <param name="e">The <see cref="System.EventArgs"/> instance containing the event data.</param>
     protected void btnSelectAdditional_Click(object sender, EventArgs e)
     {
-        Response.Redirect("CustomerDisplay.aspx");
+        Response.Redirect("CustomerList.aspx");
     }
 }
