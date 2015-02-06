@@ -116,4 +116,13 @@ public class CustomerList
     {
         this._customerList.Clear();
     }
+
+    /// <summary>
+    /// Sorts this list of customers.
+    /// </summary>
+    public void Sort()
+    {
+        this._customerList.Sort((x, y) => String.Compare(x.LastName, 
+            y.LastName, StringComparison.Ordinal));
+    }
 }

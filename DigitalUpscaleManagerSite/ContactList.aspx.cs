@@ -1,5 +1,8 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Web.UI;
+using System.Web.UI.WebControls;
 
 /// <summary>
 /// Code behind for the ContactList page.
@@ -27,13 +30,13 @@ public partial class ContactList : Page
     private void DisplayCustomers()
     {
         this.lstCustomers.Items.Clear();
+        this.customerList.Sort();
         for (var i = 0; i < this.customerList.Count; i++)
         {
             var customer = this.customerList[i];
             this.lstCustomers.Items.Add(customer.GenerateDisplayText());
         }
     }
-
     /// <summary>
     /// Handles the Click event of the btnRemove control.
     /// </summary>
