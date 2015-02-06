@@ -5,19 +5,43 @@ using System.Diagnostics;
 /// Models feedback from a customer.
 /// </summary>
 /// <author>
-///     Osa Gaius
+/// Osa Gaius
 /// </author>
 /// <version>Spring 2015</version>
 public class Feedback
 {
     #region Instance Variables
+    /// <summary>
+    /// The feedback identifier
+    /// </summary>
     private string feedbackID;
+    /// <summary>
+    /// The customer identifier
+    /// </summary>
     private string customerID;
+    /// <summary>
+    /// The software identifier
+    /// </summary>
     private string softwareID;
+    /// <summary>
+    /// The support identifier
+    /// </summary>
     private string supportID;
+    /// <summary>
+    /// The date opened
+    /// </summary>
     private DateTime dateOpened;
+    /// <summary>
+    /// The date closed
+    /// </summary>
     private DateTime dateClosed;
+    /// <summary>
+    /// The title
+    /// </summary>
     private string title;
+    /// <summary>
+    /// The description
+    /// </summary>
     private string description;
 
     #endregion
@@ -27,7 +51,9 @@ public class Feedback
     /// <summary>
     /// Returns a string representation of the feedback.
     /// </summary>
-    /// <returns>a string representing the feedback</returns>
+    /// <returns>
+    /// a string representing the feedback
+    /// </returns>
     public string FormatFeedback()
     {
         return "Feedback for software " + this.softwareID + " closed " +
@@ -36,6 +62,12 @@ public class Feedback
     #endregion
 
     #region Properties
+    /// <summary>
+    /// Gets or sets the feedback identifier.
+    /// </summary>
+    /// <value>
+    /// The feedback identifier.
+    /// </value>
     public string FeedbackId
     {
         get { return this.feedbackID; }
@@ -46,6 +78,12 @@ public class Feedback
         }
     }
 
+    /// <summary>
+    /// Gets or sets the customer identifier.
+    /// </summary>
+    /// <value>
+    /// The customer identifier.
+    /// </value>
     public string CustomerId
     {
         get { return this.customerID; }
@@ -56,6 +94,12 @@ public class Feedback
         }
     }
 
+    /// <summary>
+    /// Gets or sets the software identifier.
+    /// </summary>
+    /// <value>
+    /// The software identifier.
+    /// </value>
     public string SoftwareId
     {
         get { return this.softwareID; }
@@ -66,6 +110,12 @@ public class Feedback
         }
     }
 
+    /// <summary>
+    /// Gets or sets the support identifier.
+    /// </summary>
+    /// <value>
+    /// The support identifier.
+    /// </value>
     public string SupportId
     {
         get { return this.supportID; }
@@ -76,6 +126,12 @@ public class Feedback
         }
     }
 
+    /// <summary>
+    /// Gets or sets the date opened.
+    /// </summary>
+    /// <value>
+    /// The date opened.
+    /// </value>
     public DateTime DateOpened
     {
         get { return this.dateOpened; }
@@ -86,6 +142,12 @@ public class Feedback
         }
     }
 
+    /// <summary>
+    /// Gets or sets the title.
+    /// </summary>
+    /// <value>
+    /// The title.
+    /// </value>
     public string Title
     {
         get { return this.title; }
@@ -96,6 +158,12 @@ public class Feedback
         }
     }
 
+    /// <summary>
+    /// Gets or sets the date closed.
+    /// </summary>
+    /// <value>
+    /// The date closed.
+    /// </value>
     public DateTime DateClosed
     {
         get { return this.dateClosed; }
@@ -106,6 +174,12 @@ public class Feedback
         }
     }
 
+    /// <summary>
+    /// Gets or sets the description.
+    /// </summary>
+    /// <value>
+    /// The description.
+    /// </value>
     public string Description
     {
         get { return this.description; }
