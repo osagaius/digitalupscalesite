@@ -8,6 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="Styles/Styles.css" rel="stylesheet" />
     <meta name="description" content="Displays navigation for pages" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
 <body>
     <header class="navbar">

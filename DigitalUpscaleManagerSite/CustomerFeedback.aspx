@@ -21,21 +21,25 @@
                 <asp:Label runat="server" Text="Customer ID:" ID="lblCustomerID"></asp:Label>
 
                 &nbsp;&nbsp;&nbsp;
-        <asp:TextBox ID="txtCustomerID" runat="server"></asp:TextBox>
-                &nbsp;&nbsp;<asp:RequiredFieldValidator ID="rfvCustomerID" runat="server" ControlToValidate="txtCustomerID" CssClass="message" Display="Dynamic">You must enter your Customer ID.</asp:RequiredFieldValidator>
-                &nbsp;&nbsp;&nbsp;<asp:CompareValidator ID="cvCustomerID" runat="server" ControlToValidate="txtCustomerID" CssClass="message" Display="Dynamic" Operator="DataTypeCheck" Type="Integer">Must be a number.</asp:CompareValidator>
-                &nbsp;&nbsp;<br />
+                <asp:TextBox ID="txtCustomerID" runat="server"></asp:TextBox>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:CompareValidator ID="cvCustomerID" runat="server" ControlToValidate="txtCustomerID" CssClass="message" Display="Dynamic" Operator="DataTypeCheck" Type="Integer">Must be a number.</asp:CompareValidator>
+                &nbsp;&nbsp;<asp:RequiredFieldValidator ID="rfvCustomerID" runat="server" ControlToValidate="txtCustomerID" CssClass="message" Display="Dynamic" ErrorMessage="RequiredFieldValidator">This field cannot be blank.</asp:RequiredFieldValidator>
+                <br />
                 &nbsp;&nbsp;&nbsp;&nbsp;
                 <br />
-        <asp:Button ID="btnFeedback" runat="server" Text="Show Feedback" />
+                <asp:Button ID="btnFeedback" runat="server" Text="Show Feedback" OnClick="btnFeedback_Click" />
+                <br />
+                <br />
+                <asp:Label ID="lblFeedbackMessage" runat="server" CssClass="message"></asp:Label>
                 <br />
                 <br />
             </div>
             <asp:Panel runat="server" ID="pnlFeedback">
                 <asp:Label ID="lblFeedback" runat="server" Text="Your closed feedback:"></asp:Label>
                 <br />
-                <asp:ListBox ID="ListBox1" runat="server" Height="133px" Width="505px"></asp:ListBox>
-                <asp:SqlDataSource ID="SqlDataSource1" runat="server"></asp:SqlDataSource>
+                <asp:ListBox ID="lstFeedback" runat="server" Height="133px" Width="505px"></asp:ListBox>
+                <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:CustomerFeedbackConnectionString %>" ProviderName="<%$ ConnectionStrings:CustomerFeedbackConnectionString.ProviderName %>" SelectCommand="SELECT * FROM [Feedback] ORDER BY [FeedbackID], [CustomerID]"></asp:SqlDataSource>
+                <asp:RequiredFieldValidator ID="rfvFeedbackList" runat="server" ControlToValidate="lstFeedback" CssClass="message" Display="Dynamic" ErrorMessage="RequiredFieldValidator" ValidationGroup="feedback">You must select a feedback.</asp:RequiredFieldValidator>
                 <br />
                 <br />
                 <asp:Label ID="lblServiceTime" runat="server" Text="Please rate the service time"></asp:Label>
@@ -71,12 +75,12 @@
                 <br />
                 <asp:Label ID="lblContactMethod" runat="server" Text="How do prefer to be contacted?"></asp:Label>
                 <br />
-                <asp:RadioButtonList ID="rblResolution0" runat="server">
-                    <asp:ListItem Selected="True" Value="1">Email</asp:ListItem>
-                    <asp:ListItem Value="2">Phone</asp:ListItem>
+                <asp:RadioButtonList ID="rblContactMethod" runat="server">
+                    <asp:ListItem Selected="True" Value="Email">Email</asp:ListItem>
+                    <asp:ListItem Value="Phone">Phone</asp:ListItem>
                 </asp:RadioButtonList>
                 <br />
-                <asp:Button ID="btnSubmit" runat="server" Text="Submit" />
+                <asp:Button ID="btnSubmit" runat="server" Text="Submit" OnClick="btnSubmit_Click" ValidationGroup="feedback" />
                 <br />
             </asp:Panel>
         </form>

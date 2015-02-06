@@ -13,6 +13,14 @@ public class Feedback
     #region Instance Variables
 
     /// <summary>
+    /// The customer identifier
+    /// </summary>
+    private string customerID;
+    /// <summary>
+    /// The feedback identifier
+    /// </summary>
+    private string feedbackID;
+    /// <summary>
     /// The software identifier
     /// </summary>
     private string softwareID;
@@ -50,26 +58,11 @@ public class Feedback
     public string FormatFeedback()
     {
         return "Feedback for software " + this.softwareID + " closed " +
-               this.dateClosed + " (" + this.title + ")";
+               this.dateClosed.ToString("MM/dd/yyyy") + " (" + this.title + ")";
     }
     #endregion
 
     #region Properties
-    /// <summary>
-    /// Gets or sets the feedback identifier.
-    /// </summary>
-    /// <value>
-    /// The feedback identifier.
-    /// </value>
-    public int FeedbackId { get; set; }
-
-    /// <summary>
-    /// Gets or sets the customer identifier.
-    /// </summary>
-    /// <value>
-    /// The customer identifier.
-    /// </value>
-    public int CustomerId { get; set; }
 
     /// <summary>
     /// Gets or sets the software identifier.
@@ -165,6 +158,39 @@ public class Feedback
             Trace.Assert(value != null);
             this.description = value;
         }
-    } 
+    }
+
+    /// <summary>
+    /// Gets or sets the customer identifier.
+    /// </summary>
+    /// <value>
+    /// The customer identifier.
+    /// </value>
+    public string CustomerId
+    {
+        get { return this.customerID; }
+        set
+        {
+            Trace.Assert(value != null);
+            this.customerID = value;
+        }
+    }
+
+    /// <summary>
+    /// Gets or sets the feedback identifier.
+    /// </summary>
+    /// <value>
+    /// The feedback identifier.
+    /// </value>
+    public string FeedbackId
+    {
+        get { return this.feedbackID; }
+        set
+        {
+            Trace.Assert(value != null);
+            this.feedbackID = value;
+        }
+    }
+
     #endregion
 }

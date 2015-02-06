@@ -15,10 +15,7 @@ public class Description
     /// The comments
     /// </summary>
     private string comments;
-    /// <summary>
-    /// The contact
-    /// </summary>
-    private bool contact;
+
     /// <summary>
     /// The contact method
     /// </summary>
@@ -88,15 +85,7 @@ public class Description
     /// <value>
     ///   <c>true</c> if contact; otherwise, <c>false</c>.
     /// </value>
-    public bool Contact
-    {
-        get { return this.contact; }
-        set
-        {
-            Trace.Assert(value != null);
-            this.contact = value;
-        }
-    }
+    public bool Contact { get; set; }
 
     /// <summary>
     /// Gets or sets the contact method.
