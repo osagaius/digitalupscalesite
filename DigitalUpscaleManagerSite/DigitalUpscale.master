@@ -1,0 +1,29 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="DigitalUpscale.master.cs" Inherits="DigitalUpscale" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>The Digital Upscale Manager for Ballgames Site</title>
+    <link href="Styles/DigitalUpscale.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder ID="headPlaceHolder" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form runat="server">
+        <header>
+            <h1>Digital Upscale Manager for Ballgames</h1>
+            <h2>"Managing Ballgames with Technology"</h2>
+        </header>
+        <div>
+            <asp:ContentPlaceHolder ID="formPlaceHolder" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    <footer>
+        <p>Please contact use at 88‐BallGame or email 
+            <asp:HyperLink ID="hplInfo" runat="server" NavigateUrl="malito:info@ballgame.com">info@ballgame.com</asp:HyperLink>
+        </p>
+    </footer>
+    </form>
+    </body>
+</html>
