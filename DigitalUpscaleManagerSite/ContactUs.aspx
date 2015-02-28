@@ -4,16 +4,16 @@
 </asp:Content>
 <asp:Content ID="formContent" ContentPlaceHolderID="formPlaceHolder" runat="server">
     <h3>Please feel free to contact us.</h3>
-    <asp:Label ID="lblPhone" runat="server" Text="Phone: 88-Ballgame"></asp:Label>
+    <asp:Label ID="lblPhone" CssClass="upscaleHeadingLabel" runat="server" Text="Phone: 88-Ballgame"></asp:Label>
     <br />
-    <asp:Label ID="lblHours" runat="server" Text="Hours of operation: Monday - Friday, 9a-5p"></asp:Label>
+    <asp:Label ID="lblHours" CssClass="upscaleHeadingLabel" runat="server" Text="Hours of operation: Monday - Friday, 9a-5p"></asp:Label>
     <br />
     <br />
-    <asp:Label ID="lblEmail" runat="server" Text="Email: "></asp:Label>
+    <asp:Label ID="lblEmail" CssClass="upscaleHeadingLabel" runat="server" Text="Email: "></asp:Label>
     <asp:HyperLink ID="hplInfo" runat="server" NavigateUrl="malito:info@ballgame.com">info@ballgame.com</asp:HyperLink>
     <br />
     <br />
-    <asp:Label ID="lblAddress" runat="server" Text="Address:"></asp:Label>
+    <asp:Label ID="lblAddress" CssClass="upscaleHeadingLabel" runat="server" Text="Address:"></asp:Label>
     <br />
     <asp:Label ID="lblStreetAddress" runat="server" Text="1601 Maple Street"></asp:Label>
     <br />

@@ -1,0 +1,43 @@
+﻿body
+{
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    border: 2px solid cornflowerblue;
+    background-color: ivory;
+}
+
+header {
+    font-size: 100%;
+    font-weight: bold;
+    color: cornflowerblue;
+    text-align: center;
+}
+
+footer {
+    border-top: 2px solid cornflowerblue;
+    font-size: 80%;
+    text-align: right;
+    margin-bottom: 5px;
+}
+
+.mnuUpscale {
+    border-top: 2px solid cornflowerblue;
+    border-bottom: 2px solid cornflowerblue;
+    padding: .5em 0 .5em 1em;
+    margin-bottom: .5em;
+}
+
+.message {
+    color: red;
+}
+
+.upscaleHeadingLabel {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.upscaleButton {
+    margin-top: 1em;
+    margin-left: 12em;
+}

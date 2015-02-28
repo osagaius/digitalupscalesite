@@ -27,10 +27,9 @@
         <asp:Label ID="lblEmail" runat="server">Email</asp:Label>
         <br />
         <br />
-        <asp:Button ID="btnAdd" runat="server" Text="Add to Contacts" OnClick="btnAdd_Click" />
-        <asp:Button ID="btnView" runat="server" Text="View Contact List"
+        <asp:Button CssClass="upscaleButton" ID="btnAdd" runat="server" Text="Add to Contacts" OnClick="btnAdd_Click" />
+        <asp:Button CssClass="upscaleButton" ID="btnView" runat="server" Text="View Contact List"
             CausesValidation="False" OnClick="btnView_Click" />
-        <br />
         <br />
         <asp:Label ID="lblMessage" runat="server" CssClass="message"></asp:Label>
     </div>

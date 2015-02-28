@@ -7,5 +7,5 @@
         <h3>Your feedback has been recieved. Thank you!</h3>
     </div>
     <asp:Panel ID="contact" runat="server">Thanks for requesting to be contacted. We will contact you soon.</asp:Panel>
-    <asp:Button ID="btnReturn" runat="server" Text="Return to Feedback Page" OnClick="btnReturn_Click" />
+    <asp:Button CssClass="upscaleButton" ID="btnReturn" runat="server" Text="Return to Feedback Page" OnClick="btnReturn_Click" />
 </asp:Content>

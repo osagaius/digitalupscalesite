@@ -22,7 +22,7 @@
         <br />
     </div>
     <asp:Panel runat="server" ID="pnlFeedback">
-        <asp:Label ID="lblFeedback" runat="server" Text="Your closed feedback:"></asp:Label>
+        <asp:Label CssClass="upscaleHeadingLabel" ID="lblFeedback" runat="server" Text="Your closed feedback:"></asp:Label>
         <br />
         <asp:ListBox ID="lstFeedback" runat="server" Height="133px" Width="505px"></asp:ListBox>
         <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:CustomerFeedbackConnectionString %>" ProviderName="<%$ ConnectionStrings:CustomerFeedbackConnectionString.ProviderName %>" SelectCommand="SELECT * FROM [Feedback] ORDER BY [FeedbackID], [CustomerID]"></asp:SqlDataSource>
@@ -67,7 +67,7 @@
             <asp:ListItem Value="Phone">Phone</asp:ListItem>
         </asp:RadioButtonList>
         <br />
-        <asp:Button ID="btnSubmit" runat="server" Text="Submit" OnClick="btnSubmit_Click" ValidationGroup="feedback" />
+        <asp:Button CssClass="upscaleButton" ID="btnSubmit" runat="server" Text="Submit" OnClick="btnSubmit_Click" ValidationGroup="feedback" />
         <br />
     </asp:Panel>
 </asp:Content>
