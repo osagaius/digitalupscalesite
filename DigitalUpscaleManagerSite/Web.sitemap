@@ -6,8 +6,9 @@
       <siteMapNode url="ContactUs.aspx" title="Contact Us"  description="Contact the company" />
     </siteMapNode>
     <siteMapNode url="" title="Administration"  description="The administration pages">
-      <siteMapNode url="Default.aspx" title="Home"  description="The homepage" />
-      <siteMapNode url="Default.aspx" title="Home"  description="The homepage" />
+      <siteMapNode url="CustomerList.aspx" title="Display Customers"  description="Display the customers" />
+      <siteMapNode url="ContactList.aspx" title="Display Contacts"  description="Display the contact list" />
     </siteMapNode>
+    <siteMapNode url="SiteMap.aspx" title="Site Map"  description="The site map" />
   </siteMapNode>
 </siteMap>
