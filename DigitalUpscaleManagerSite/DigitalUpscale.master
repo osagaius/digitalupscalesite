@@ -29,11 +29,12 @@
             <asp:ContentPlaceHolder ID="formPlaceHolder" runat="server">
             </asp:ContentPlaceHolder>
         </div>
-    <footer>
-        <p>Please contact use at 88‐BallGame or email 
+        <footer>
+            <p>
+                Please contact us at 88‐BallGame or email 
             <asp:HyperLink ID="hplInfo" runat="server" NavigateUrl="malito:info@ballgame.com">info@ballgame.com</asp:HyperLink>
-        </p>
-    </footer>
+            </p>
+        </footer>
     </form>
-    </body>
+</body>
 </html>
