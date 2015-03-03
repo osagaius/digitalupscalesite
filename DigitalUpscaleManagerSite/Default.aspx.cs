@@ -4,7 +4,7 @@ using System.Web.UI;
 /// <summary>
 /// Code behind for homepage
 /// </summary>
-public partial class _Default : Page
+public partial class Default : Page
 {
     /// <summary>
     /// Handles the Load event of the Page control.

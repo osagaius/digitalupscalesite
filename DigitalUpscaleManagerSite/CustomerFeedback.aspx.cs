@@ -12,8 +12,8 @@ using System.Web.UI.WebControls;
 /// <version>Spring 2015</version>
 public partial class CustomerFeedback : Page
 {
-    private string customerID;
-    private List<Feedback> customerFeedback;
+    private string _customerId;
+    private List<Feedback> _customerFeedback;
 
     /// <summary>
     /// Handles the Load event of the Page control.
@@ -23,7 +23,7 @@ public partial class CustomerFeedback : Page
     protected void Page_Load(object sender, EventArgs e)
     {
         this.txtCustomerID.Focus();
-        this.customerFeedback = new List<Feedback>();
+        this._customerFeedback = new List<Feedback>();
 
         if (!IsPostBack)
             this.ResetFeedbackPanel();
@@ -35,7 +35,7 @@ public partial class CustomerFeedback : Page
     /// <param name="e">The <see cref="EventArgs"/> instance containing the event data.</param>
     protected void btnFeedback_Click(object sender, EventArgs e)
     {
-        this.customerID = this.txtCustomerID.Text;
+        this._customerId = this.txtCustomerID.Text;
         var customerData = new DataView();
         if (IsValid)
         {
@@ -67,7 +67,7 @@ public partial class CustomerFeedback : Page
     private void DisplayCustomerFeedback(DataView customerData)
     {
         this.GenerateCustomerFeedbackList(customerData);
-        var sorted = this.customerFeedback.OrderBy(x => x.DateClosed);
+        var sorted = this._customerFeedback.OrderBy(x => x.DateClosed);
 
         foreach (var currentFeedback in sorted)
         {
@@ -78,14 +78,14 @@ public partial class CustomerFeedback : Page
 
     private void GenerateCustomerFeedbackList(DataView customerData)
     {
-        this.customerFeedback.Clear();
+        this._customerFeedback.Clear();
         this.lstFeedback.Items.Clear();
 
         for (var i = 0; i < customerData.Count; i++)
         {
             var row = customerData[i];
             var feedback = GenerateFeedback(row);
-            this.customerFeedback.Add(feedback);
+            this._customerFeedback.Add(feedback);
         }
     }
 
@@ -111,11 +111,11 @@ public partial class CustomerFeedback : Page
     private DataView GetCustomerData()
     {
         var dataTable = (DataView)this.SqlDataSource1.Select(DataSourceSelectArguments.Empty);
-        if (dataTable == null || this.customerID.Length < 1)
+        if (dataTable == null || this._customerId.Length < 1)
         {
             return null;
         }
-        dataTable.RowFilter = "CustomerID = " + this.customerID;
+        dataTable.RowFilter = "CustomerID = " + this._customerId;
         return dataTable;
     }
 
@@ -142,7 +142,7 @@ public partial class CustomerFeedback : Page
     {
         return new Description()
         {
-            CustomerId = Convert.ToInt32(this.customerID),
+            CustomerId = Convert.ToInt32(this._customerId),
             FeedbackId = Convert.ToInt32(this.lstFeedback.SelectedItem.Value),
             ServiceTime = Convert.ToInt32(this.rblServiceTime.SelectedItem.Value),
             Efficiency = Convert.ToInt32(this.rblEfficiency.SelectedItem.Value),

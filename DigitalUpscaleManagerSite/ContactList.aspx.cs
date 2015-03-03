@@ -10,7 +10,7 @@ using System.Web.UI;
 /// <version>Spring 2015</version>
 public partial class ContactList : Page
 {
-    private CustomerList customerList;
+    private CustomerList _customerList;
 
     /// <summary>
     /// Handles the Load event of the Page control.
@@ -19,7 +19,7 @@ public partial class ContactList : Page
     /// <param name="e">The <see cref="System.EventArgs"/> instance containing the event data.</param>
     protected void Page_Load(object sender, EventArgs e)
     {
-        this.customerList = CustomerList.GetCustomers();
+        this._customerList = CustomerList.GetCustomers();
         if (!IsPostBack)
             this.DisplayCustomers();
     }
@@ -27,10 +27,10 @@ public partial class ContactList : Page
     private void DisplayCustomers()
     {
         this.lstCustomers.Items.Clear();
-        this.customerList.Sort();
-        for (var i = 0; i < this.customerList.Count; i++)
+        this._customerList.Sort();
+        for (var i = 0; i < this._customerList.Count; i++)
         {
-            var customer = this.customerList[i];
+            var customer = this._customerList[i];
             this.lstCustomers.Items.Add(customer.GenerateDisplayText());
         }
     }
@@ -41,7 +41,7 @@ public partial class ContactList : Page
     /// <param name="e">The <see cref="System.EventArgs"/> instance containing the event data.</param>
     protected void btnRemove_Click(object sender, EventArgs e)
     {
-        if (this.customerList.Count <= 0)
+        if (this._customerList.Count <= 0)
         {
             return;
         }
@@ -53,7 +53,7 @@ public partial class ContactList : Page
     {
         if (this.lstCustomers.SelectedIndex > -1)
         {
-            this.customerList.RemoveAt(this.lstCustomers.SelectedIndex);
+            this._customerList.RemoveAt(this.lstCustomers.SelectedIndex);
             this.DisplayCustomers();
         }
         else
@@ -69,11 +69,11 @@ public partial class ContactList : Page
     /// <param name="e">The <see cref="System.EventArgs"/> instance containing the event data.</param>
     protected void btnEmpty_Click(object sender, EventArgs e)
     {
-        if (this.customerList.Count <= 0)
+        if (this._customerList.Count <= 0)
         {
             return;
         }
-        this.customerList.Clear();
+        this._customerList.Clear();
         this.lblMessage.Text = string.Empty;
         this.lstCustomers.Items.Clear();
     }

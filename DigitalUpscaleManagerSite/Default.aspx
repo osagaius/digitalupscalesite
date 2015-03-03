@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" MasterPageFile="~/DigitalUpscale.master" CodeFile="Default.aspx.cs" Inherits="_Default" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" MasterPageFile="~/DigitalUpscale.master" CodeFile="Default.aspx.cs" Inherits="Default" %>
 
 <asp:Content ID="headContent" ContentPlaceHolderID="headPlaceHolder" runat="server">
 </asp:Content>
