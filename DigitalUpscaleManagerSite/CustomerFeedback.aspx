@@ -31,7 +31,7 @@
         <br />
         <asp:Label ID="lblServiceTime" runat="server" Text="Please rate the service time"></asp:Label>
         <asp:RadioButtonList ID="rblServiceTime" runat="server">
-            <asp:ListItem Selected="True" Value="1">Satisfied</asp:ListItem>
+            <asp:ListItem Value="1">Satisfied</asp:ListItem>
             <asp:ListItem Value="2">Neither Satisfied Nor Dissatisfied</asp:ListItem>
             <asp:ListItem Value="3">Dissatisfied</asp:ListItem>
         </asp:RadioButtonList>
@@ -39,7 +39,7 @@
         <asp:Label ID="lblEfficiency" runat="server" Text="Please rate the technical efficiency"></asp:Label>
         <br />
         <asp:RadioButtonList ID="rblEfficiency" runat="server">
-            <asp:ListItem Selected="True" Value="1">Satisfied</asp:ListItem>
+            <asp:ListItem Value="1">Satisfied</asp:ListItem>
             <asp:ListItem Value="2">Neither Satisfied Nor Dissatisfied</asp:ListItem>
             <asp:ListItem Value="3">Dissatisfied</asp:ListItem>
         </asp:RadioButtonList>
@@ -47,7 +47,7 @@
         <asp:Label ID="lblEfficiency0" runat="server" Text="Please rate the resolution of your problem"></asp:Label>
         <br />
         <asp:RadioButtonList ID="rblResolution" runat="server">
-            <asp:ListItem Selected="True" Value="1">Satisfied</asp:ListItem>
+            <asp:ListItem Value="1">Satisfied</asp:ListItem>
             <asp:ListItem Value="2">Neither Satisfied Nor Dissatisfied</asp:ListItem>
             <asp:ListItem Value="3">Dissatisfied</asp:ListItem>
         </asp:RadioButtonList>
@@ -63,7 +63,7 @@
         <asp:Label ID="lblContactMethod" runat="server" Text="How do prefer to be contacted?"></asp:Label>
         <br />
         <asp:RadioButtonList ID="rblContactMethod" runat="server">
-            <asp:ListItem Selected="True" Value="Email">Email</asp:ListItem>
+            <asp:ListItem Value="Email">Email</asp:ListItem>
             <asp:ListItem Value="Phone">Phone</asp:ListItem>
         </asp:RadioButtonList>
         <br />
