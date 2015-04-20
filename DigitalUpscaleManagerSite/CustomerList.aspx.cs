@@ -18,7 +18,7 @@ public partial class Default : Page
     /// <summary>
     /// The customer list
     /// </summary>
-    private CustomerList contactList;
+    private CustomerList _contactList;
 
     /// <summary>
     /// Handles the Load event of the Page control.
@@ -30,12 +30,12 @@ public partial class Default : Page
         if (!IsPostBack)
         {
             this.ddlCustomers.DataBind();
-            this.contactList = new CustomerList();
-            Session["CustomerList"] = this.contactList;
+            this._contactList = new CustomerList();
+            Session["CustomerList"] = this._contactList;
         }
         else
         {
-            this.contactList = CustomerList.GetCustomers();
+            this._contactList = CustomerList.GetCustomers();
         }
 
         this.InitializeLabelWithDefaultCustomer();
@@ -145,7 +145,7 @@ public partial class Default : Page
         else
         {
             this.lblMessage.Text = string.Empty;
-            this.contactList.AddItem(this._selectedCustomer);
+            this._contactList.AddItem(this._selectedCustomer);
         }
     }
 
@@ -156,7 +156,7 @@ public partial class Default : Page
     /// <returns></returns>
     private bool FindDuplicate(Customer aCustomer)
     {
-        var matchingCustomer = this.contactList[aCustomer.Name];
+        var matchingCustomer = this._contactList[aCustomer.Name];
         return matchingCustomer != null;
     }
     /// <summary>

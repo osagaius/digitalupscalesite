@@ -14,12 +14,12 @@ public class Description
     /// <summary>
     /// The comments
     /// </summary>
-    private string comments;
+    private string _comments;
 
     /// <summary>
     /// The contact method
     /// </summary>
-    private string contactMethod; 
+    private string _contactMethod; 
     #endregion
 
     #region Properties
@@ -71,11 +71,11 @@ public class Description
     /// </value>
     public string Comments
     {
-        get { return this.comments; }
+        get { return this._comments; }
         set
         {
             Trace.Assert(value != null);
-            this.comments = value;
+            this._comments = value;
         }
     }
 
@@ -95,11 +95,11 @@ public class Description
     /// </value>
     public string ContactMethod
     {
-        get { return this.contactMethod; }
+        get { return this._contactMethod; }
         set
         {
             Trace.Assert(value != null);
-            this.contactMethod = value;
+            this._contactMethod = value;
         }
     } 
     #endregion

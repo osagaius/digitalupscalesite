@@ -15,35 +15,35 @@ public class Feedback
     /// <summary>
     /// The customer identifier
     /// </summary>
-    private string customerID;
+    private string _customerId;
     /// <summary>
     /// The feedback identifier
     /// </summary>
-    private string feedbackID;
+    private string _feedbackId;
     /// <summary>
     /// The software identifier
     /// </summary>
-    private string softwareID;
+    private string _softwareId;
     /// <summary>
     /// The support identifier
     /// </summary>
-    private string supportID;
+    private string _supportId;
     /// <summary>
     /// The date opened
     /// </summary>
-    private DateTime dateOpened;
+    private DateTime _dateOpened;
     /// <summary>
     /// The date closed
     /// </summary>
-    private DateTime dateClosed;
+    private DateTime _dateClosed;
     /// <summary>
     /// The title
     /// </summary>
-    private string title;
+    private string _title;
     /// <summary>
     /// The description
     /// </summary>
-    private string description;
+    private string _description;
 
     #endregion
 
@@ -57,8 +57,8 @@ public class Feedback
     /// </returns>
     public string FormatFeedback()
     {
-        return "Feedback for software " + this.softwareID + " closed " +
-               this.dateClosed.ToString("MM/dd/yyyy") + " (" + this.title + ")";
+        return "Feedback for software " + this._softwareId + " closed " +
+               this._dateClosed.ToString("MM/dd/yyyy") + " (" + this._title + ")";
     }
     #endregion
 
@@ -72,11 +72,11 @@ public class Feedback
     /// </value>
     public string SoftwareId
     {
-        get { return this.softwareID; }
+        get { return this._softwareId; }
         set
         {
             Trace.Assert(value != null);
-            this.softwareID = value;
+            this._softwareId = value;
         }
     }
 
@@ -88,11 +88,11 @@ public class Feedback
     /// </value>
     public string SupportId
     {
-        get { return this.supportID; }
+        get { return this._supportId; }
         set
         {
             Trace.Assert(value != null);
-            this.supportID = value;
+            this._supportId = value;
         }
     }
 
@@ -104,11 +104,11 @@ public class Feedback
     /// </value>
     public DateTime DateOpened
     {
-        get { return this.dateOpened; }
+        get { return this._dateOpened; }
         set
         {
             Trace.Assert(value != null);
-            this.dateOpened = value;
+            this._dateOpened = value;
         }
     }
 
@@ -120,11 +120,11 @@ public class Feedback
     /// </value>
     public string Title
     {
-        get { return this.title; }
+        get { return this._title; }
         set
         {
             Trace.Assert(value != null);
-            this.title = value;
+            this._title = value;
         }
     }
 
@@ -136,11 +136,11 @@ public class Feedback
     /// </value>
     public DateTime DateClosed
     {
-        get { return this.dateClosed; }
+        get { return this._dateClosed; }
         set
         {
             Trace.Assert(value != null);
-            this.dateClosed = value;
+            this._dateClosed = value;
         }
     }
 
@@ -152,11 +152,11 @@ public class Feedback
     /// </value>
     public string Description
     {
-        get { return this.description; }
+        get { return this._description; }
         set
         {
             Trace.Assert(value != null);
-            this.description = value;
+            this._description = value;
         }
     }
 
@@ -168,11 +168,11 @@ public class Feedback
     /// </value>
     public string CustomerId
     {
-        get { return this.customerID; }
+        get { return this._customerId; }
         set
         {
             Trace.Assert(value != null);
-            this.customerID = value;
+            this._customerId = value;
         }
     }
 
@@ -184,11 +184,11 @@ public class Feedback
     /// </value>
     public string FeedbackId
     {
-        get { return this.feedbackID; }
+        get { return this._feedbackId; }
         set
         {
             Trace.Assert(value != null);
-            this.feedbackID = value;
+            this._feedbackId = value;
         }
     }
 
