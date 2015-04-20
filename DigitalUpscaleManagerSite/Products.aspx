@@ -4,7 +4,8 @@
 </asp:Content>
 <asp:Content ID="formContent" ContentPlaceHolderID="formPlaceHolder" runat="server">
     <br />
-    <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="SoftwareID" DataSourceID="sdsProducts" AllowSorting="True" CellPadding="4" ForeColor="#333333" GridLines="None">
+    <h2>Products</h2>
+    <asp:GridView ID="gvProducts" runat="server" AutoGenerateColumns="False" DataKeyNames="SoftwareID" DataSourceID="sdsProducts" AllowSorting="True" CellPadding="4" ForeColor="#333333" GridLines="None" AllowPaging="True">
         <AlternatingRowStyle BackColor="White" />
         <Columns>
             <asp:CommandField ShowSelectButton="True" ShowDeleteButton="True" ShowEditButton="True" />
@@ -56,8 +57,31 @@
         <SortedAscendingHeaderStyle BackColor="#6D95E1" />
         <SortedDescendingCellStyle BackColor="#E9EBEF" />
         <SortedDescendingHeaderStyle BackColor="#4870BE" />
-</asp:GridView>
+    </asp:GridView>
     <br />
+    <h2>Add a Product</h2>
+    <asp:Label ID="lblName" runat="server" Text="Name:"></asp:Label>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <asp:TextBox ID="txtName" runat="server" Text='<%# Bind("Name") %>' CausesValidation="True" Style="margin-left: 0px"></asp:TextBox>
+    <asp:RequiredFieldValidator ID="rfvName" runat="server" ControlToValidate="txtName" CssClass="error" Display="Dynamic" ErrorMessage="A name is required.">*</asp:RequiredFieldValidator>
+    <br />
+    <asp:Label ID="lblID" runat="server" Text="Software ID:"></asp:Label>
+    &nbsp;&nbsp;&nbsp;
+    <asp:TextBox ID="txtID" runat="server" Text='<%# Bind("Name") %>' CausesValidation="True"></asp:TextBox>
+    <asp:RequiredFieldValidator ID="rfvID" runat="server" ControlToValidate="txtID" CssClass="error" Display="Dynamic" ErrorMessage="An ID is required.">*</asp:RequiredFieldValidator>
+    <br />
+    <asp:Label ID="lblVersion" runat="server" Text="Version:"></asp:Label>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <asp:TextBox ID="txtVersion" runat="server" Text='<%# Bind("Name") %>' CausesValidation="True"></asp:TextBox>
+    <asp:RequiredFieldValidator ID="rfvVersion" runat="server" ControlToValidate="txtVersion" CssClass="error" Display="Dynamic" ErrorMessage="A version is required.">*</asp:RequiredFieldValidator>
+    <br />
+    <asp:Label ID="lblRelease" runat="server" Text="Release Date:"></asp:Label>
+    &nbsp;
+    <asp:TextBox ID="txtDate" runat="server" Text='<%# Bind("Name") %>' CausesValidation="True"></asp:TextBox>
+    <asp:RequiredFieldValidator ID="rfvDate" runat="server" ControlToValidate="txtDate" CssClass="error" Display="Dynamic" ErrorMessage="A date is required.">*</asp:RequiredFieldValidator>
+    <asp:CustomValidator ID="cvReleaseDate" runat="server" OnServerValidate="valDateRange_ServerValidate" ControlToValidate="txtDate" CssClass="error" Display="Dynamic" ErrorMessage="A valid date is required.">*</asp:CustomValidator>
+    <br />
+    <asp:Button ID="btnAddProduct" runat="server" Text="Add Product" OnClick="btnAddProduct_Click" />
     <asp:ValidationSummary ID="vsProducts" runat="server" CssClass="error" />
     <br />
     <asp:SqlDataSource ID="sdsProducts" runat="server" ConnectionString="<%$ ConnectionStrings:DigitalManagerConnectionString %>" ProviderName="<%$ ConnectionStrings:DigitalManagerConnectionString.ProviderName %>" SelectCommand="SELECT [SoftwareID], [Name], [Version], [ReleaseDate] FROM [Software]" DeleteCommand="DELETE FROM [Software] WHERE [SoftwareID] = ?" InsertCommand="INSERT INTO [Software] ([SoftwareID], [Name], [Version], [ReleaseDate]) VALUES (?, ?, ?, ?)" UpdateCommand="UPDATE [Software] SET [Name] = ?, [Version] = ?, [ReleaseDate] = ? WHERE [SoftwareID] = ?">

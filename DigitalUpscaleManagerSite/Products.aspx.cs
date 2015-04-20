@@ -31,4 +31,16 @@ public partial class Products : System.Web.UI.Page
                         && dt <= maxDate
                         && dt >= minDate);
     }
+    protected void btnAddProduct_Click(object sender, EventArgs e)
+    {
+        if (!Page.IsValid)
+        {
+            return;
+        }
+
+        this.txtName.Text = "";
+        this.txtID.Text = "";
+        this.txtVersion.Text = "";
+        this.txtDate.Text = "";
+    }
 }
