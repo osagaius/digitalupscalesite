@@ -7,5 +7,9 @@
     <br />
     <br />
     <asp:HyperLink ID="hlFeedback" runat="server" NavigateUrl="~/CustomerFeedback.aspx">Go To Customer Feedback</asp:HyperLink>
+    <br />
+    <br />
+    <asp:HyperLink ID="hlncidents" runat="server" NavigateUrl="~/IncidentDisplay.aspx">Go To Customer Feedback</asp:HyperLink>
+
 </asp:Content>
 
