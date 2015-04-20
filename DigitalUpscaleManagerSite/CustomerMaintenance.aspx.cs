@@ -61,6 +61,11 @@ public partial class CustomerMaintenance : System.Web.UI.Page
             gvCustomers.DataBind();
         }
     }
+    /// <summary>
+    /// Handles the ItemInserted event of the dvSelectedCustomer control.
+    /// </summary>
+    /// <param name="sender">The source of the event.</param>
+    /// <param name="e">The <see cref="DetailsViewInsertedEventArgs"/> instance containing the event data.</param>
     protected void dvSelectedCustomer_ItemInserted(object sender, DetailsViewInsertedEventArgs e)
     {
         this.lblError.Text = "";
