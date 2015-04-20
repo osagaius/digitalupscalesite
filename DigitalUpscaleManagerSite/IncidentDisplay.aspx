@@ -3,10 +3,13 @@
 <asp:Content ID="headContent" ContentPlaceHolderID="headPlaceHolder" runat="server">
 </asp:Content>
 <asp:Content ID="formContent" ContentPlaceHolderID="formPlaceHolder" runat="server">
-
+    <br />
     <asp:DropDownList ID="ddlCustomers" runat="server" DataSourceID="sdsCustomers" DataTextField="Name" DataValueField="CustomerID" AutoPostBack="True">
     </asp:DropDownList>
+
     <asp:SqlDataSource ID="sdsCustomers" runat="server" ConnectionString="<%$ ConnectionStrings:DigitalUpscaleConnectionString %>" ProviderName="<%$ ConnectionStrings:DigitalUpscaleConnectionString.ProviderName %>" SelectCommand="SELECT * FROM [Customer]"></asp:SqlDataSource>
+    <br />
+    <br />
     <asp:DataList ID="dlIncidents" runat="server" DataKeyField="FeedbackID" DataSourceID="sdsIncidents" Style="margin-right: 75px" Width="605px">
         <HeaderTemplate>
             <tr>
@@ -21,7 +24,6 @@
             </tr>
         </HeaderTemplate>
         <ItemTemplate>
-            <br />
 
             <tr>
                 <td>
