@@ -9,6 +9,11 @@
       <siteMapNode url="CustomerList.aspx" title="Display Customers"  description="Display the customers" />
       <siteMapNode url="ContactList.aspx" title="Display Contacts"  description="Display the contact list" />
     </siteMapNode>
+    <siteMapNode url="" title="Maintenance"  description="The Maintenance pages">
+      <siteMapNode url="CustomerMaintenance.aspx" title="Maintain Customers" description="Maintain Customers" />
+      <siteMapNode url="Products.aspx" title="Maintain Software" description="Maintain Software" />
+      <siteMapNode url="IncidentDisplay.aspx" title="Maintain Incidents"  description="Maintain Incidents" />
+    </siteMapNode>
     <siteMapNode url="SiteMap.aspx" title="Site Map"  description="The site map" />
   </siteMapNode>
 </siteMap>
