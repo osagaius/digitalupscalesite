@@ -119,4 +119,87 @@ public partial class Products : System.Web.UI.Page
             }
         }
     }
+    /// <summary>
+    /// Handles the RowDeleted event of the gvProducts control.
+    /// </summary>
+    /// <param name="sender">The source of the event.</param>
+    /// <param name="e">The <see cref="GridViewDeletedEventArgs"/> instance containing the event data.</param>
+    protected void gvProducts_RowDeleted(object sender, GridViewDeletedEventArgs e)
+    {
+        this.lblError.Text = "";
+        if (e.Exception != null)
+        {
+            this.lblError.Text = "A database error has occurred.<br /<br />" + e.Exception.Message;
+            e.ExceptionHandled = true;
+        }
+        else
+        {
+            gvProducts.DataBind();
+        }
+    }
+    /// <summary>
+    /// Handles the RowUpdated event of the gvProducts control.
+    /// </summary>
+    /// <param name="sender">The source of the event.</param>
+    /// <param name="e">The <see cref="GridViewUpdatedEventArgs"/> instance containing the event data.</param>
+    protected void gvProducts_RowUpdated(object sender, GridViewUpdatedEventArgs e)
+    {
+        this.lblError.Text = "";
+        if (e.Exception != null)
+        {
+            this.lblError.Text = "A database error has occurred.<br /<br />" + e.Exception.Message;
+            e.ExceptionHandled = true;
+        }
+        else if (e.AffectedRows == 0)
+        {
+            this.lblError.Text = "Another user may have updated this customer. Try again";
+        }
+        else
+        {
+            gvProducts.DataBind();
+        }
+        EnableProductPanel();
+    }
+    /// <summary>
+    /// Handles the RowEditing event of the gvProducts control.
+    /// </summary>
+    /// <param name="sender">The source of the event.</param>
+    /// <param name="e">The <see cref="GridViewEditEventArgs"/> instance containing the event data.</param>
+    protected void gvProducts_RowEditing(object sender, GridViewEditEventArgs e)
+    {
+        DisableProductPanel();
+    }
+    /// <summary>
+    /// Handles the RowCancelingEdit event of the gvProducts control.
+    /// </summary>
+    /// <param name="sender">The source of the event.</param>
+    /// <param name="e">The <see cref="GridViewCancelEditEventArgs"/> instance containing the event data.</param>
+    protected void gvProducts_RowCancelingEdit(object sender, GridViewCancelEditEventArgs e)
+    {
+        EnableProductPanel();
+    }
+    /// <summary>
+    /// Disables the product panel.
+    /// </summary>
+    private void DisableProductPanel()
+    {
+        pnlAddProduct.Enabled = false;
+        rfvDate.Enabled = false;
+        rfvID.Enabled = false;
+        rfvName.Enabled = false;
+        rfvVersion.Enabled = false;
+    }
+
+    /// <summary>
+    /// Enables the product panel.
+    /// </summary>
+    private void EnableProductPanel()
+    {
+        pnlAddProduct.Enabled = true;
+        rfvDate.Enabled = true;
+        rfvID.Enabled = true;
+        rfvName.Enabled = true;
+        rfvVersion.Enabled = true;
+    }
+
 }
