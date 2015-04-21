@@ -1,4 +1,5 @@
-﻿using System.Data;
+﻿using System.Collections;
+using System.Data;
 using System.Configuration;
 using System.ComponentModel;
 using System.Collections.Generic;
@@ -16,17 +17,17 @@ using System.Data.OleDb;
 /// Spring 2015
 /// </version>
 [DataObject(true)]
-public static class SupportDb
+public static class SupportDatabase
 {
     /// <summary>
-    /// Gets the support staff.
+    /// Gets all the support staff.
     /// </summary>
     /// <returns>
     /// Collection of support staff
     /// </returns>
     /// <exception cref="System.IO.InvalidDataException">Could not execute query</exception>
     [DataObjectMethod(DataObjectMethodType.Select)]
-    public static List<Support> GetSupportStaff()
+    public static IEnumerable GetAllSupportStaff()
     {
         var supportList = new List<Support>();
         var connection = new OleDbConnection(GetConnectionString());

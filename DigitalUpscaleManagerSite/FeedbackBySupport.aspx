@@ -7,5 +7,5 @@
     <asp:DropDownList ID="ddlStaff" runat="server" DataSourceID="odsSupportStaff" DataTextField="Name" DataValueField="SupportId" AutoPostBack="True">
     </asp:DropDownList>
 
-    <asp:ObjectDataSource ID="odsSupportStaff" runat="server" OldValuesParameterFormatString="original_{0}" SelectMethod="GetSupportStaff" TypeName="SupportDb"></asp:ObjectDataSource>
+    <asp:ObjectDataSource ID="odsSupportStaff" runat="server" OldValuesParameterFormatString="original_{0}" SelectMethod="GetAllSupportStaff" TypeName="SupportDatabase"></asp:ObjectDataSource>
 </asp:Content>
