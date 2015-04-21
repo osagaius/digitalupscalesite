@@ -44,6 +44,14 @@ public class Feedback
     /// The description
     /// </summary>
     private string _description;
+    /// <summary>
+    /// The description
+    /// </summary>
+    private string _customerName;
+    /// <summary>
+    /// The software name
+    /// </summary>
+    private string _softwareName;
 
     #endregion
 
@@ -192,5 +200,38 @@ public class Feedback
         }
     }
 
+
+    /// <summary>
+    /// Gets or sets the customer.
+    /// </summary>
+    /// <value>
+    /// The customer.
+    /// </value>
+    public string Customer
+    {
+        get { return this._customerName; }
+        set
+        {
+            Trace.Assert(value != null);
+            this._customerName = value;
+        }
+    }
+
+
+    /// <summary>
+    /// Gets or sets the name of the software.
+    /// </summary>
+    /// <value>
+    /// The name of the software.
+    /// </value>
+    public string SoftwareName
+    {
+        get { return this._softwareName; }
+        set
+        {
+            Trace.Assert(value != null);
+            this._softwareName = value;
+        }
+    }
     #endregion
 }

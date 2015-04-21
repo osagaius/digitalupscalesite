@@ -54,6 +54,7 @@ public static class SupportDatabase
 
 
         dataReader.Close();
+        connection.Close();
         return supportList;
     }
 
