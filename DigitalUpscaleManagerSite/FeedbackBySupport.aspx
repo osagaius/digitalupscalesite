@@ -4,8 +4,8 @@
 </asp:Content>
 <asp:Content ID="formContent" ContentPlaceHolderID="formPlaceHolder" runat="server">
     <br />
-    <asp:DropDownList ID="ddlStaff" runat="server" DataSourceID="sdsSupport" DataTextField="Name" DataValueField="SupportID" AutoPostBack="True">
+    <asp:DropDownList ID="ddlStaff" runat="server" DataSourceID="odsSupportStaff" DataTextField="Name" DataValueField="SupportId" AutoPostBack="True">
     </asp:DropDownList>
 
-    <asp:ObjectDataSource ID="ObjectDataSource1" runat="server"></asp:ObjectDataSource>
+    <asp:ObjectDataSource ID="odsSupportStaff" runat="server" OldValuesParameterFormatString="original_{0}" SelectMethod="GetSupportStaff" TypeName="SupportDb"></asp:ObjectDataSource>
 </asp:Content>

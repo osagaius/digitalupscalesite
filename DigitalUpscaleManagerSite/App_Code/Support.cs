@@ -2,7 +2,7 @@
 
 
 /// <summary>
-/// Summary description for Support
+///Models a Support staff member object.
 /// </summary>
 public class Support
 {
@@ -84,7 +84,6 @@ public class Support
         }
     }
 
-=
     /// <summary>
     /// Gets or sets the phone.
     /// </summary>
